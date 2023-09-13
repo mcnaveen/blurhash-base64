@@ -1,20 +1,35 @@
+// Thanks to https://gist.github.com/mattiaz9/53cb67040fa135cb395b1d015a200aff
+
 import { decode } from "blurhash";
 
-export interface IOptions {
-    hash: string;
-    height?: number;
-    width?: number;
-}
-
+/**
+ * Convert Blurhash to Base64
+ * 
+ * @param {string} hash - Pass the hash
+ * @returns {string} base64/dataURL
+ * @example
+ * ```js
+ * import { blurhashToBase64 } from "blurhash-base64";
+ *
+ * const base64 = blurhashToBase64("U25EI7[k0]1D=*RzA8XA9WBEj]^BS%be,^$O");
+ * console.log(base64)
+ * ```
+ * -------
+ * Others:
+ * 
+ * ✨ URL to Blurhash - https://www.npmjs.com/package/blurhash-from-url
+ * 
+ * ✨ Generate Blurhash in CLI: https://www.npmjs.com/package/blurhash-cli
+ * 
+ */
 export function blurhashToBase64(hash: string) {
     if (!hash) return undefined
 
     const pixels = decode(hash, 32, 32)
-    const dataURL = parsePixels(pixels, 32, 32)
-    return dataURL
+    const base64 = parsePixels(pixels, 32, 32)
+    return base64
 }
 
-// thanks to https://github.com/wheany/js-png-encoder
 function parsePixels(pixels: Uint8ClampedArray, width: number, height: number) {
     const pixelsString = [...pixels].map(byte => String.fromCharCode(byte)).join("")
     const pngString = generatePng(width, height, pixelsString)
