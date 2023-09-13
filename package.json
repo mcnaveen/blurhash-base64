@@ -1,0 +1,51 @@
+{
+  "name": "blurhash-base64",
+  "version": "0.0.1",
+  "description": "Utility to convert blurhash to base64",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "yarn build && node ./test/index.js",
+    "watch": "rollup -cw",
+    "commit": "gacp",
+    "clean:dist": "npm exec -- rimraf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcnaveen/blurhash-base64.git"
+  },
+  "keywords": [
+    "blurhash"
+  ],
+  "author": "mcnaveen <me@mcnaveen.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcnaveen/blurhash-base64/issues"
+  },
+  "homepage": "https://github.com/mcnaveen/blurhash-base64#readme",
+  "dependencies": {
+    "blurhash": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "gacp": "^3.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "typescript": "^4.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gacp": {
+    "add": false,
+    "push": false,
+    "emoji": "emoji",
+    "editor": false
+  }
+}
