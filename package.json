@@ -14,19 +14,6 @@
     "commit": "gacp",
     "clean:dist": "npm exec -- rimraf ./dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mcnaveen/blurhash-base64.git"
-  },
-  "keywords": [
-    "blurhash"
-  ],
-  "author": "mcnaveen <me@mcnaveen.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mcnaveen/blurhash-base64/issues"
-  },
-  "homepage": "https://github.com/mcnaveen/blurhash-base64#readme",
   "dependencies": {
     "blurhash": "^2.0.5"
   },
@@ -42,6 +29,24 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcnaveen/blurhash-base64.git"
+  },
+  "author": "mcnaveen <me@mcnaveen.com>",
+  "homepage": "https://github.com/mcnaveen/blurhash-base64#readme",
+  "bugs": {
+    "url": "https://github.com/mcnaveen/blurhash-base64/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "blurhash",
+    "plaiceholder",
+    "optimization",
+    "next/image",
+    "next-image",
+    "blurhash-to-base64"
+  ],
   "gacp": {
     "add": false,
     "push": false,
