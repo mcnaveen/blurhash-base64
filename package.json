@@ -1,6 +1,6 @@
 {
   "name": "blurhash-base64",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utility to convert blurhash to base64",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
