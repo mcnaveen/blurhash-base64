@@ -19,10 +19,10 @@
 
 ```bash
 #npm
-npm install -g blurhash-base64
+npm install blurhash-base64
 
 #yarn
-yarn global add blurhash-base64
+yarn add blurhash-base64
 
 #pnpm
 pnpm add blurhash-base64
